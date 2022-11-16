@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled, { css } from "styled-components";
 
 //* Components *//
@@ -6,10 +6,8 @@ import NavItem from "./NavItem";
 
 //* Styles *//
 import { MainContainer } from "../../UI/container";
-import { hoverIconStyle } from "../../constant/hoverIconStyle";
 
 //* Icons *//
-import { BiSearch } from "react-icons/bi";
 import { CgShoppingBag } from "react-icons/cg";
 
 //* Images *//
@@ -20,26 +18,17 @@ import { navItems } from "../../constant/navItems";
 import Search from "./Search";
 
 const Header = ({ setShowModal }) => {
-  const [isActive, setIsActive] = useState(false);
-
-  const handleMouseEnter = () => {
-    setIsActive(true);
-  };
-  const handleMouseLeave = () => {
-    setIsActive(false);
-  };
 
   return (
     <MainContainer>
       <MainHeader space>
         <BasketContainer>
           <Icon>
-            <CgShoppingBag
-              size={"27px"}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-              style={hoverIconStyle(isActive)}
-            />
+            <HoverIcon>
+              <CgShoppingBag
+                size={"27px"}
+              />
+            </HoverIcon>
           </Icon>
           <LoginRegisterButton>
             <div>ورورد</div> <SlashCenter>/</SlashCenter> <div>ثبت نام</div>
@@ -69,6 +58,14 @@ const Header = ({ setShowModal }) => {
 export default Header;
 
 //* Styled Components *//
+
+const HoverIcon = styled.span`
+  transition: all .2s ease;
+
+  &:hover {
+    color: #00bf6f;
+  }
+`
 
 const MenuContainer = styled.div`
   position: relative;

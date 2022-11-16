@@ -1,0 +1,136 @@
+/* .splide.wonder {
+  display: block;
+}
+
+.splide__slide.wonder {
+  border-radius: 0;
+}
+
+.splide__arrows.wonder {
+  position: absolute;
+  inset: 0;
+  z-index: 99;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 1rem;
+
+  pointer-events: none;
+}
+
+.splide__arrow.wonder {
+  background: rgb(0, 0, 0);
+  border-radius: 50%;
+  padding: 5px;
+  color: white;
+  pointer-events: all;
+  border: none;
+  cursor: pointer;
+}
+.splide__arrow:hover {
+  background: rgba(0, 0, 0, 0.3);
+} */
+
+.slider-container {
+  /* width: min(780px, 100% - 2rem); */
+  width: 100%;
+
+  display: flex;
+}
+
+.splide {
+  display: flex;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.splide__arrows {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 1rem;
+
+  pointer-events: none;
+}
+
+.splide__arrow {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  padding: 5px;
+  color: white;
+  pointer-events: all;
+  border: none;
+  cursor: pointer;
+}
+.splide__arrow:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.arrow-prev {
+  transform: translate(-1px, 1px);
+}
+.arrow-next {
+  transform: translate(1px, 1px);
+}
+
+.splide__pagination.brand {
+  /* background: red; */
+  /* color: white; */
+
+  position: absolute;
+  bottom: 10%;
+  left: 15%;
+
+  display: none;
+}
+
+.splide__pagination li {
+  width: 0.7rem;
+  height: 0.7rem;
+  margin: 5px !important;
+}
+
+.splide__pagination__page {
+  width: 100%;
+  height: 100%;
+  background: #ccc;
+  border: none;
+  border-radius: 50%;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.splide__pagination__page.is-active {
+  background: white;
+  opacity: 1;
+}
+
+.splide__slide {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.splide__slide.brand {
+  border-radius: 0;
+  /* margin-inline: 20px; */
+}
+
+.brand {
+  margin-block: 2rem;
+}
+
+.splide__arrow--next.brand {
+  transform: translateX(150%);
+}
+
+.splide__arrow--prev.brand {
+  transform: translateX(-150%);
+}
